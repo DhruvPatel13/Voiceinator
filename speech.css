@@ -1,0 +1,172 @@
+html {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --backgroundMain: #14181d;
+  --backgroundCard: #181e25;
+  --backgroundBtn: #35cf4e;
+  --size: 5px;
+}
+body {
+  background-color: var(--backgroundMain);
+  color: white;
+}
+/* wrapper */
+.voiceinator {
+  margin: 100px auto;
+  min-height: 500px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--backgroundCard);
+  border-radius: 10px;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+h1 {
+  background-color: var(--backgroundBtn);
+  font-weight: 900;
+  font-size: 2.8rem;
+  text-align: center;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* all inputs */
+.allInputs {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  margin: 15px 0;
+}
+select {
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+  background-color: hsl(207, 21%, 34%, 0.3);
+  /* arrow  */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+select option {
+  background-color: var(--backgroundMain);
+  cursor: pointer;
+}
+label {
+  margin: 15px 0 5px;
+  font-size: 22px;
+}
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #053a5f;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px;
+  background-color: var(--backgroundBtn);
+  height: 2rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #053a5f;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  border-radius: 0;
+  background-color: var(--backgroundBtn);
+  height: 2rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+textarea {
+  padding: 0 15px;
+  height: 15vh;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(207, 21%, 34%, 0.3);
+  color: white;
+}
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 7%;
+}
+#stop,
+#speak {
+  background-color: transparent;
+  border: 2px solid var(--backgroundBtn);
+  border-radius: 10px;
+  color: var(--backgroundBtn);
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#stop:hover,
+#speak:hover {
+  background-color: var(--backgroundBtn);
+  transform: translateY(-5%);
+  color: white;
+}
+#stop:active,
+#speak:active {
+  background: hsl(130, 62%, 51%, 0.5);
+  transform: background-color 1s ease-out;
+}
